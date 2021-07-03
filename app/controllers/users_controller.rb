@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: %i[show edit update destroy]
 
   def index
     @users = User.all
@@ -24,11 +24,11 @@ class UsersController < ApplicationController
   def show; end
 
   def update
-    respond_to do | format |
+    respond_to do |format|
       if @user.update(user_params)
-        format.html{redirect_to @user, notice: "User Updated"}
+        format.html { redirect_to @user, notice: 'User Updated' }
       else
-        format.html{render :edit, notice: "#{@user.errors.full_messages.to_sentence}"}
+        format.html { render :edit, notice: @user.errors.full_messages.to_sentence.to_s }
       end
     end
   end
