@@ -1,0 +1,36 @@
+<h1>Edit User <%= @user.username %></h1>
+
+<!-- Form code in HTML format
+<form action="/users/new" method="POST">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username" placeholder="please put your username"><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" placeholder="example@example.com"><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" placeholder="please put a password"><br>
+  <input type="submit" value="Submit">
+</form>
+-->
+
+<!-- Build with the form_for -->
+<%= form_tag(user_path, method: "patch") do %>
+  <%= label_tag('username', 'Username:') %><br>
+  <%= text_field_tag('user[username]') %><br>
+  <%= label_tag('email', 'Email:') %><br>
+  <%= email_field_tag('user[email]') %><br>
+  <%= label_tag('password', 'Password:') %><br>
+  <%= password_field_tag('user[password]') %><br>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<!-- Build with the form_with
+<%= form_with model: @user do |form| %>
+  <%= form.label :username, "Username:" %><br>
+  <%= form.text_field :username, placeholder: "please put your username" %><br>
+  <%= form.label :email, "Email:" %><br>
+  <%= form.email_field :email, placeholder: "example@example.com" %><br>
+  <%= form.label :password, "Password:" %><br>
+  <%= form.password_field :password, placeholder: "please put a password." %><br>
+  <%= form.submit "Submit" %>
+<% end %>
+-->
