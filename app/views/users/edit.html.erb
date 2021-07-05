@@ -13,7 +13,7 @@
 -->
 
 <!-- Build with the form_for -->
-<%= form_tag(@user, method: "get") do %>
+<%= form_tag(user_path, method: "patch") do %>
   <%= label_tag('username', 'Username:') %><br>
   <%= text_field_tag('user[username]') %><br>
   <%= label_tag('email', 'Email:') %><br>
@@ -23,7 +23,7 @@
   <%= submit_tag("Submit") %>
 <% end %>
 
-<!-- Build with the form_with -->
+<!-- Build with the form_with
 <%= form_with model: @user do |form| %>
   <%= form.label :username, "Username:" %><br>
   <%= form.text_field :username, placeholder: "please put your username" %><br>
@@ -33,3 +33,4 @@
   <%= form.password_field :password, placeholder: "please put a password." %><br>
   <%= form.submit "Submit" %>
 <% end %>
+-->
