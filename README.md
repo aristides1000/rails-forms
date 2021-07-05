@@ -34,7 +34,7 @@ To get a locusing [VSCode](https://code.visualstudio.com/), first, you must [ins
 - Now we will migrate the database with the command `rails db: migrate`.
 - Now we are going to proceed to install the gems on our local machine through the `bundle install` command.
 - Now, open a browser and visit `http://localhost:3000/` to see your application! Note: If you’re using a VM, you will need to open the browser inside of your VM in order for this to work.
-- If you have any questions or problems about how to run this project, you can leave me a comment in the [issues section](https://github.com/aristides1000/rails-forms/issues) of this repository, I am more than willing to help you.
+- If you have any questions or problems about how to run this project, you can leave me a comment in the [issues section](https://github.com/aristides1000/rails-forms/issues) of this repository, I am more than willing to help you..
 
 ### Usage
 
